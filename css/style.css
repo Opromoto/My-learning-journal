@@ -1,0 +1,244 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header, footer, nav, .hero {
+    width: 100%;
+} */
+
+ul, li {
+    font-size: 0.75rem;    
+}
+
+/* NAV */
+
+nav ul {
+    font-family: sans-serif;
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1em 0.7em 0 0.1em;
+    justify-content: right;
+}
+li {
+    margin: auto 0 0;
+}
+.align-left {
+    margin-right: auto;
+}
+
+.fa-fire {
+    color: red;
+    font-size: 2em;
+
+}
+.narrow {
+    display: none;
+}
+
+/* Hero Section */
+
+.hero {
+    background-image: url('../images/heroBg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 4vw;
+    margin-top: 0;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.blog-hero {
+    width: 90%;
+    text-shadow: 0 0 3px black;
+    padding: 5rem 1.5rem 1rem 1rem ;
+}
+.date-hero {
+    margin: 0;
+}
+.blog-title-hero {
+    margin: 1.5vw 0;
+}
+.preview-hero {
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Blog Posts */
+
+main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+.blog {
+    background-color: #fde0e5;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: left;
+    height: min-content;
+}
+
+.blog img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+}
+.blog p {
+    margin: 5px;
+}
+.more, .recent {
+    color: #131010;
+    margin: 0 auto;
+}
+.more {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #131010;
+    color: whitesmoke;
+    padding: 1em 0;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+}
+footer h5, footer h6 {
+    margin: auto;
+}
+footer h6 {
+    font-size: 0.65rem;
+}
+
+@media (min-width: 768px) {
+    ul, li {
+        font-size: 1rem;
+    }
+    .hero {
+        padding-top: 2rem;
+        font-size: 1.5rem;
+        height: 50vh;
+        padding-right: 400px;        
+    }
+    main {
+        margin-top: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "recent recent recent"
+                             "one two three" 
+                             " four five six";
+    }
+    .one {grid-area: one;}
+    .two {grid-area: two;}
+    .three {grid-area: three;}
+    .four {grid-area: four;}
+    .five {grid-area: five;}
+    .six {grid-area: six;}
+
+    .recent { grid-area: recent;}
+
+    .about-flex {
+        display: flex;
+        gap: 15px;
+
+    }
+    .about-flex img,.about-flex h2 {
+        margin: auto 0;
+    }
+
+}
+@media (max-width: 500px) {
+    .narrow {
+        display: inline;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    .wide {
+        display: none;
+    }
+
+
+}
+/* MODAL */
+.modal {
+    display: none;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #131010;
+}
+.modal ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 25px;
+}
+.modal ul li {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+.modal button {
+    color: rgb(233, 22, 22);
+    float: right;
+    background-color: #131010;
+    border: none;
+    padding: 10px 10px 0 0;
+    font-weight: bolder;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+
+
+                            /*  Home page */
+.home-hero {
+    background-color: whitesmoke;
+    padding: auto 10px; 
+}
+.home-hero img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.home-hero p {
+    line-height: 1.3;
+}
+.container {
+    margin: auto;
+    width: 90%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+        /* ABOUT STYLES */
+
+.about {
+    margin-top: 3rem;
+}
+.about img{
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;   
+}
